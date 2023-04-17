@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+
+{% block main %}
+<section class="hero d-flex align-items-center" style="
+    background-image: url('https://images.unsplash.com/photo-1623874514711-0f321325f318?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    height: 100vh;
+    background-position: center;
+    ">
+
+    <div class="container mask py-3" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="row justify-content-center align-items-center text-center text-white">
+          <div class="col-lg-7">
+            <h1>Beast Builders Workout Tracker</h1>
+            <h4>Train Hard, Be Elite</h4>
+            <p>Beast Builders is more than just a workout tracking app – it's a tool for achieving greatness. Use the tracker to train harder, track your progress, and achieve elite-level results.</p>
+            <a class="btn btn-primary my-1" href="/tracker" role="button">Start Tracking</a>
+          </div>
+        </div>
+      </div>
+
+</section>
+{% endblock %}

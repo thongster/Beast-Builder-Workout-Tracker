@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block title %}Tracker{% endblock %}
+
+{% block main %}
+<h1 align="center" class="mt-3">Tracker</h1>
+
+<form method="POST" class="form-group">
+    <div class="form-row py-2">
+        <div class="col">
+        <input autocomplete="off" autofocus class="form-control form-control-sm mx-auto my-1" id="date" name="date" placeholder="Date (Required)" type="text">
+        </div>
+        <div class="col">
+        <input autocomplete="off" class="form-control form-control-sm mx-auto my-1" id="exercise" name="exercise" placeholder="Exercise (Required)" type="text">
+        </div>
+        <div class="col">
+        <input autocomplete="off" class="form-control form-control-sm mx-auto my-1" id="sets" name="sets" placeholder="Sets" type="text">
+        </div>
+        <div class="col">
+        <input autocomplete="off" class="form-control form-control-sm mx-auto my-1" id="reps" name="reps" placeholder="Reps" type="text">
+        </div>
+        <div class="col">
+        <input autocomplete="off" class="form-control form-control-sm mx-auto my-1" id="weight" name="weight" placeholder="Weight" type="text">
+        </div>
+
+        <textarea name="workout" id="workout" class="form-control my-1" placeholder="Notes"></textarea>
+        <br />
+        <div class="container text-right">
+            <button type="submit" class="btn btn-primary my-1">Add Workout</button>
+        
+    </div>
+</form>
+
+<div class="container text-left">
+    <div class="row px-2">
+            {% for workout in workouts %}
+            <div class="col-md-3 border py-2 mt-1">
+                    <b>Date:</b> {{workout.date}}<br>
+                    <b>Exercise:</b> {{ workout.exercise }}<br>
+                    <b>Sets:</b> {{workout.sets}}<br>
+                    <b>Reps:</b> {{ workout.reps }}<br>
+                    <b>Weight:</b> {{ workout.weight }}<br>
+                    <b>Notes:</b> {{ workout.note }}
+                    <button type="button" class="close" onClick="deleteWorkout({{ workout.id }})">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            {% endfor %}
+    </div> 
+</div>
+
+{% endblock %}
