@@ -1,5 +1,5 @@
 # Beast Builders Workout Tracker
-#### Video Demo:  <URL HERE>
+#### Video Demo:  <https://youtu.be/bxitlJzCuVI>
 #### Description: A walkthrough of the Beast Builders Workout Tracker created with Python and Flask.
 This project is a simple CRUD (create, read, update, delete) app I created for the CS50x final project. Using a combination of Python, Flask, SQL, along with HTML, CSS (Bootstrap), and a tiny bit of Javascript, I was able to create a very simple workout tracker to replace my current workout tracking on an Excel spreadsheet.
 
